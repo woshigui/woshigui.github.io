@@ -33,7 +33,34 @@
         <hr>
     </div>
     <div class="post-content">
-        
+        <p>最近我开通了自己的博客，只是闲着无聊做了一个，随便记录一下生活的平常吧。</p>
+<p>开通这种博客所需要掌握的一些基本东西：</p>
+<ul>
+<li>hexo+github+域名</li>
+<li>github创建个人仓库，记住使用xxx.github.io，其中xxx代表你的github的名字。</li>
+<li>hexo基于Node.js，win首先安装Node。使用hexo的简单命令，常用的如hexo clean、g、s、d、n “名称”。如何下载及初始化使用部署方案可以直接查看官网。<a href="%5BHexo%5D(https://hexo.io/)">hexo</a>往下滑，找到开始使用。hexo里面有很多好看的主题，可以根据自己的需要克隆别人的。</li>
+</ul>
+<p>记住在source里面新建一个CNAME文件，这里面填写你的域名，比如说你域名是abc.xyz，就直接写abc.xyz就可以。这样子hexo g就会提前把这文件放入到public里面，就省去了之后与github关联之后，在github上新建CNAME文件。</p>
+<p><img src="https://gitee.com/wjx0119/zhishiku/raw/master/DD412/202303121600692.png" alt="image-20230312160058669"></p>
+<ul>
+<li><p>hexo与github关联，在主目录找到_config.yml，修改deploy，xxx要改成自己的github名字，跟之前创建的时候一样。然后hexo g生成，hexo s本地查看，hexo d部署就可以。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: https://github.com/xxx/xxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
+<li><p>绑定域名，如果域名使用了cloudflare，就在DNS里面添加记录，添加两条，格式如下。</p>
+<p><img src="https://gitee.com/wjx0119/zhishiku/raw/master/DD412/202303121555020.png" alt="image-20230312155255142"></p>
+</li>
+<li><p>之后去github里面仓库界面，找到setting，点击Pages，修改Custom domain改成自己的域名就可以了。<img src="https://gitee.com/wjx0119/zhishiku/raw/master/DD412/202303121606150.png" alt="image-20230312160649111"></p>
+</li>
+<li><p>然后点击域名就能到这个博客界面了。例如我的博客网站输入 <a target="_blank" rel="noopener" href="https://wjx3023.xyz/">wjx3023.xyz</a> 即可。</p>
+<p>我发现国内有时候会被墙掉，反正将就、凑合着用把。</p>
+</li>
+</ul>
+<h3 id="以下为chatgpt写的开通博客的文章，我搬过来直接用了。"><a href="#以下为chatgpt写的开通博客的文章，我搬过来直接用了。" class="headerlink" title="以下为chatgpt写的开通博客的文章，我搬过来直接用了。"></a>以下为chatgpt写的开通博客的文章，我搬过来直接用了。</h3><h4 id="为什么要开通博客"><a href="#为什么要开通博客" class="headerlink" title="为什么要开通博客"></a>为什么要开通博客</h4><p>我一直喜欢写作，但是一直没有一个合适的平台来展示我的作品。社交媒体虽然很方便，但是很容易被淹没在大量的信息中。而博客则可以让我的作品有一个长期存在的地方，让更多人看到我的作品。</p>
+<p>此外，开通博客还可以让我记录自己的成长历程，可以看到自己在不断进步的过程中的点滴变化。</p>
+<h4 id="开通博客的过程"><a href="#开通博客的过程" class="headerlink" title="开通博客的过程"></a>开通博客的过程</h4><p>开通博客并不是一件容易的事情，需要进行一些准备工作。首先，我选择了一个静态网站生成器，这样可以让我的博客更加快速、安全和易于维护。然后，我选择了一个合适的主题，使我的博客看起来更加专业和美观。</p>
+<p>接下来，我开始写作并发布我的第一篇博客。我花费了很多时间来思考我的第一篇博客应该写些什么，最终我决定写一些关于我的博客的想法和感受。</p>
+<h4 id="开通博客的收获"><a href="#开通博客的收获" class="headerlink" title="开通博客的收获"></a>开通博客的收获</h4><p>开通博客给我带来了很多收获。首先，我可以更好地记录自己的成长历程，看到自己在不断进步的过程中的点滴变化。其次，我可以通过博客分享我的想法和经验，与更多志同道合的人交流和互动。最重要的是，开通博客让我更加自信和有动力去追求自己的梦想。</p>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>开通博客是一件很有意义的事情，它可以让我们更好地表达自己，记录自己的成长历程，与更多志同道合的人交流和互动。我很开心能够拥有一个自己的博客，我相信它会给我带来更多的收获和成长。</p>
+
     </div>
 
     
