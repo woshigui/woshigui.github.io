@@ -41,14 +41,14 @@
 <li>hexo基于Node.js，win首先安装Node。使用hexo的简单命令，常用的如hexo clean、g、s、d、n “名称”。如何下载及初始化使用部署方案可以直接查看官网。<a href="%5BHexo%5D(https://hexo.io/)">hexo</a>往下滑，找到开始使用。hexo里面有很多好看的主题，可以根据自己的需要克隆别人的。</li>
 </ul>
 <p>记住在source里面新建一个CNAME文件，这里面填写你的域名，比如说你域名是abc.xyz，就直接写abc.xyz就可以。这样子hexo g就会提前把这文件放入到public里面，就省去了之后与github关联之后，在github上新建CNAME文件。</p>
-<p><img src="https://gitee.com/wjx0119/zhishiku/raw/master/DD412/202303121600692.png" alt="image-20230312160058669"></p>
+<p><img src="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/202303121635916.png" alt="image-20230312160058669"></p>
 <ul>
 <li><p>hexo与github关联，在主目录找到_config.yml，修改deploy，xxx要改成自己的github名字，跟之前创建的时候一样。然后hexo g生成，hexo s本地查看，hexo d部署就可以。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: https://github.com/xxx/xxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
 <li><p>绑定域名，如果域名使用了cloudflare，就在DNS里面添加记录，添加两条，格式如下。</p>
-<p><img src="https://gitee.com/wjx0119/zhishiku/raw/master/DD412/202303121555020.png" alt="image-20230312155255142"></p>
+<p><img src="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/202303121636166.png" alt="image-20230312155255142"></p>
 </li>
-<li><p>之后去github里面仓库界面，找到setting，点击Pages，修改Custom domain改成自己的域名就可以了。<img src="https://gitee.com/wjx0119/zhishiku/raw/master/DD412/202303121606150.png" alt="image-20230312160649111"></p>
+<li><p>之后去github里面仓库界面，找到setting，点击Pages，修改Custom domain改成自己的域名就可以了。<img src="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/202303121636909.png" alt="image-20230312160649111"></p>
 </li>
 <li><p>然后点击域名就能到这个博客界面了。例如我的博客网站输入 <a target="_blank" rel="noopener" href="https://wjx3023.xyz/">wjx3023.xyz</a> 即可。</p>
 <p>我发现国内有时候会被墙掉，反正将就、凑合着用把。</p>
