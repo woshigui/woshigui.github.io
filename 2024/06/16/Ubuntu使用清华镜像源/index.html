@@ -20,28 +20,38 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度目的：WSL更换清华镜像源 使用WSL跑深度学习挺不错的，但是用wsl安装linux软件可能会存在部分问题，由于WSL里面的Ubuntu软件仓库是默认的源，有时候可能会造成网络连接问题，或者下载速度很慢，更换为清华镜像或者阿里云镜像会带来Ubuntu软件的快速下载，优化软件使用体验。 清华大学开源软件镜像站：https:&#x2F;&#x2F;mirror">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu使用清华镜像源">
+<meta property="og:url" content="http://example.com/2024/06/16/Ubuntu%E4%BD%BF%E7%94%A8%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度目的：WSL更换清华镜像源 使用WSL跑深度学习挺不错的，但是用wsl安装linux软件可能会存在部分问题，由于WSL里面的Ubuntu软件仓库是默认的源，有时候可能会造成网络连接问题，或者下载速度很慢，更换为清华镜像或者阿里云镜像会带来Ubuntu软件的快速下载，优化软件使用体验。 清华大学开源软件镜像站：https:&#x2F;&#x2F;mirror">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/image-20240112102759720.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/image-20240112103132832.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/image-20240112115422342.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/image-20240112120217116.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/image-20240112120301027.png">
+<meta property="article:published_time" content="2024-06-16T15:25:01.000Z">
+<meta property="article:modified_time" content="2024-06-16T15:27:27.999Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/woshigui/zhishiku/main/test/image-20240112102759720.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2024/06/16/Ubuntu%E4%BD%BF%E7%94%A8%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>Ubuntu使用清华镜像源 | Hexo</title>
   
 
 
@@ -192,9 +202,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -210,10 +221,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/06/16/Ubuntu%E4%BD%BF%E7%94%A8%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90/" class="post-title-link" itemprop="url">Ubuntu使用清华镜像源</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Ubuntu使用清华镜像源
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -237,7 +247,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度"><a href="#各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度" class="headerlink" title="各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度"></a>各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度</h2><p>目的：WSL更换清华镜像源</p>
+        <h2 id="各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度"><a href="#各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度" class="headerlink" title="各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度"></a>各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度</h2><p>目的：WSL更换清华镜像源</p>
 <p>使用WSL跑深度学习挺不错的，但是用wsl安装linux软件可能会存在部分问题，由于WSL里面的Ubuntu软件仓库是默认的源，有时候可能会造成网络连接问题，或者下载速度很慢，更换为清华镜像或者阿里云镜像会带来Ubuntu软件的快速下载，优化软件使用体验。</p>
 <p>清华大学开源软件镜像站：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">https://mirrors.tuna.tsinghua.edu.cn/</a></p>
 <p>清华大学Ubuntu软件仓库：<a target="_blank" rel="noopener" href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/">https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/</a></p>
@@ -319,261 +329,30 @@
 
 <p>因为使用清华镜像连接有错误，所以我现在使用阿里云镜像了，我也不知道不能使用的原因是什么。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/16/docker-desktop%E6%9B%B4%E6%94%B9%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/06/16/docker-desktop%E6%9B%B4%E6%94%B9%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE/" class="post-title-link" itemprop="url">docker desktop更改镜像存储位置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-06-16 23:24:25 / Modified: 23:28:13" itemprop="dateCreated datePublished" datetime="2024-06-16T23:24:25+08:00">2024-06-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="docker-desktop更改镜像存储位置"><a href="#docker-desktop更改镜像存储位置" class="headerlink" title="docker desktop更改镜像存储位置"></a>docker desktop更改镜像存储位置</h3><h4 id="更改docker-desktop-data的默认位置"><a href="#更改docker-desktop-data的默认位置" class="headerlink" title="更改docker-desktop-data的默认位置"></a>更改docker-desktop-data的默认位置</h4><p>首先关闭wsl</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --shutdown</span><br></pre></td></tr></table></figure>
-
-<p>导出docker-desktop-data</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --export docker-desktop-data E:\docker\docker-desktop-data.tar</span><br></pre></td></tr></table></figure>
-
-<p>注销docker-desktop-data</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --unregister docker-desktop-data</span><br></pre></td></tr></table></figure>
-
-<p>导入docker-desktop-data</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --import docker-desktop-data E:\docker\data\docker-desktop-data E:\docker\docker-desktop-data.tar --version 2</span><br></pre></td></tr></table></figure>
-
-<h4 id="更改docker-desktop的默认位置"><a href="#更改docker-desktop的默认位置" class="headerlink" title="更改docker-desktop的默认位置"></a>更改docker-desktop的默认位置</h4><p>首先关闭wsl</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --shutdown</span><br></pre></td></tr></table></figure>
-
-<p>导出docker-desktop</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --export docker-desktop E:\docker\docker-desktop.tar</span><br></pre></td></tr></table></figure>
-
-<p>注销docker-desktop</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --unregister docker-desktop</span><br></pre></td></tr></table></figure>
-
-<p>导入docker-desktop</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --import docker-desktop E:\docker\data\docker-desktop E:\docker\docker-desktop.tar --version 2</span><br></pre></td></tr></table></figure>
+        
 
 
-
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --import docker-desktop-data E:\docker\data\docker-desktop-data F:\lingSoftware\Docker\ext4.vhdx --version 2</span><br></pre></td></tr></table></figure>
-
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/06/16/docker-desktop%E6%9B%B4%E6%94%B9%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE/" rel="prev" title="docker desktop更改镜像存储位置">
+      <i class="fa fa-chevron-left"></i> docker desktop更改镜像存储位置
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/16/%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9%E7%94%9F%E6%88%90%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/06/16/%E8%87%AA%E5%BB%BA%E8%8A%82%E7%82%B9%E7%94%9F%E6%88%90%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5/" class="post-title-link" itemprop="url">自建节点生成订阅链接</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-06-16 23:23:48 / Modified: 23:33:17" itemprop="dateCreated datePublished" datetime="2024-06-16T23:23:48+08:00">2024-06-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="生成订阅链接"><a href="#生成订阅链接" class="headerlink" title="生成订阅链接"></a>生成订阅链接</h3><p>参考内容：</p>
-<p>利用CF work搭建反订阅工具</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/bulianglin/psub.git">https://github.com/bulianglin/psub.git</a></p>
-<p>汇聚订阅 使用CF pages与github链接</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/woshigui/subscribe.git">https://github.com/woshigui/subscribe.git</a></p>
-<h3 id="最终生成的有用的内容："><a href="#最终生成的有用的内容：" class="headerlink" title="最终生成的有用的内容："></a>最终生成的有用的内容：</h3><ol>
-<li>自己的订阅服务前端地址：<a target="_blank" rel="noopener" href="https://hosteons.wjx3023.workers.dev/">https://hosteons.wjx3023.workers.dev/</a></li>
-</ol>
-<p>作用：前端面板，可将自己的节点转换成订阅链接，这个是个人搭建的，防止使用其他人的后端造成节点泄露</p>
-<ol start="2">
-<li>自己的订阅服务后端地址：<a target="_blank" rel="noopener" href="https://hosteons.wjx3023.workers.dev/sub">https://hosteons.wjx3023.workers.dev/sub</a>?</li>
-</ol>
-<p>作用：可以用作其他订阅的后端地址，防止节点泄露</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> urls = [];</span><br><span class="line"><span class="comment">// let subconverter = &quot;apiurl.v1.mk&quot;; //在线订阅转换后端，目前使用肥羊的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub</span></span><br><span class="line"><span class="keyword">let</span> subconverter = <span class="string">&quot;https://hosteons.wjx3023.workers.dev/sub?&quot;</span>; <span class="comment">//在线订阅转换后端，目前使用个人的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub</span></span><br></pre></td></tr></table></figure>
-
-<p>同时还可以在汇聚订阅中使用该后端，舍弃别人的后端。</p>
-<ol start="3">
-<li>在github中加入个人的节点信息，从而实现更新订阅，同步更新节点。分享给其他人，而不需要频繁的复制粘贴节点</li>
-</ol>
-<p>我的订阅链接如下，在git的work中修改token，从而修改订阅链接地址，</p>
-<p>我的域名为<a target="_blank" rel="noopener" href="https://subscribe.beikun.eu.org,如果token为auto,那么订阅链接就是https//subscribe.beikun.eu.org/auto">https://subscribe.beikun.eu.org，如果token为auto，那么订阅链接就是https://subscribe.beikun.eu.org/auto</a></p>
-<p>如果是其他xx，就用<a target="_blank" rel="noopener" href="https://subscribe.beikun.eu.org/xx">https://subscribe.beikun.eu.org/xx</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mytoken = <span class="string">&#x27;auto&#x27;</span>; <span class="comment">//可以随便取，或者uuid生成，https://1024tools.com/uuid</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/06/16/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-06-16 21:02:27" itemprop="dateCreated datePublished" datetime="2024-06-16T21:02:27+08:00">2024-06-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -626,6 +405,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8DUbuntu%E7%89%88%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%EF%BC%8C%E5%8A%A0%E9%80%9FUbuntu%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6"><span class="nav-number">1.</span> <span class="nav-text">各种Ubuntu版本使用清华镜像，加速Ubuntu软件下载速度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%A4%87%E4%BB%BD%E6%BA%90%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 备份源软件配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%A4%8D%E5%88%B6%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 复制镜像源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%BF%AE%E6%94%B9%E8%BD%AF%E4%BB%B6%E6%BA%90%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 修改软件源配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8%EF%BC%8C%E5%8D%87%E7%BA%A7%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AD%89%E5%86%85%E5%AE%B9"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. 更新软件包列表，升级软件包等内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E4%BB%8E%E4%BB%93%E5%BA%93%E4%B8%AD%E4%B8%8B%E8%BD%BD%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.0.5.</span> <span class="nav-text">5. 从仓库中下载其它软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">1.0.6.</span> <span class="nav-text">可能存在的问题：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
