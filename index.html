@@ -235,6 +235,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/13/%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E8%83%BD%E7%9B%B4%E8%BF%9EGPU%E8%BF%90%E8%A1%8Cjupyter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王稼祥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/07/13/%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E8%83%BD%E7%9B%B4%E8%BF%9EGPU%E8%BF%90%E8%A1%8Cjupyter/" class="post-title-link" itemprop="url">解决服务器不能直连GPU运行jupyter</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-07-13 12:11:40 / Modified: 12:12:50" itemprop="dateCreated datePublished" datetime="2024-07-13T12:11:40+08:00">2024-07-13</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    
+      <a title="changyan" href="/2024/07/13/%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E8%83%BD%E7%9B%B4%E8%BF%9EGPU%E8%BF%90%E8%A1%8Cjupyter/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://example.com/2024/07/13/%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E8%83%BD%E7%9B%B4%E8%BF%9EGPU%E8%BF%90%E8%A1%8Cjupyter/" class="cy_cmt_count" data-xid="2024/07/13/解决服务器不能直连GPU运行jupyter/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="解决服务器不能直连GPU节点，运行jupyter文件的问题"><a href="#解决服务器不能直连GPU节点，运行jupyter文件的问题" class="headerlink" title="解决服务器不能直连GPU节点，运行jupyter文件的问题"></a>解决服务器不能直连GPU节点，运行jupyter文件的问题</h2><p>问题描述：我是在VScode中通过ssh连接到我的服务器中，服务器有mu02和c01n04两个节点，默认ssh连接到mu02节点，因为c01n04不能联网，只能通过本地连接ssh mu02节点，然后在这个节点中，使用ssh c01n04跳转到有GPU的节点</p>
+<p>我希望在VS Code中通过SSH连接到mu02节点后，跳转到c01n04节点，并在VS Code中使用c01n04节点的环境运行Jupyter Notebook文件</p>
+<p>你可以使用不同的本地端口进行转发。例如，可以尝试使用本地端口8889来进行转发：</p>
+<ol>
+<li><p><strong>更改端口转发命令</strong>：<br>在mu02节点上执行以下命令，将c01n04节点的Jupyter端口转发到本地的8889端口：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L 8889:localhost:8888 c01n04</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>在c01n04节点上启动Jupyter Notebook</strong>：<br>确保在c01n04节点上启动Jupyter Notebook，并记下启动后的URL（包含token）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --no-browser --port=8888</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>在VS Code中配置Jupyter Server</strong>：<br>在VS Code中打开命令面板（<code>Ctrl+Shift+P</code>或<code>Cmd+Shift+P</code>），搜索并选择“Jupyter: Specify Jupyter server for Connections”，中文表示：指定本地或远程jupyter服务器的连接。然后输入以下URL（假设Jupyter Notebook在8889端口启动，并且token为<code>your_token</code>）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8889/?token=your_token</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>选择c01n04节点上的Jupyter Kernel</strong>：<br>在VS Code中打开你的.ipynb文件，并选择使用c01n04节点上的Jupyter Kernel：</p>
+<ul>
+<li>点击.ipynb文件中的内核选择器（通常显示为“Python 3”或当前内核名称）。</li>
+<li>选择“Python (GPU)”内核（或你配置的其他带有GPU支持的内核）。</li>
+</ul>
+</li>
+</ol>
+<p>如果本地的8889端口仍然被占用，可以尝试其他未被占用的端口（例如，8890、8891等），直到找到可用的端口为止。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/19/debain%E6%9B%B4%E6%8D%A2%E4%B8%AD%E7%A7%91%E5%A4%A7%E9%95%9C%E5%83%8F%E6%BA%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1005,14 +1100,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
